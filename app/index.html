@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap, missables, and a cited guide to each trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="sunset">
+  <div class="wrap">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Platinum</h1>
+    <p class="tagline">The offline trophy guide &amp; tracker for GTA VI — every trophy, a roadmap to the platinum, and a guide to each one that cites its sources.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-big"><span id="earned-count">0</span><span class="of">/ 55 earned</span></div>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-grades" id="progress-grades"></p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs wrap" aria-label="Guide sections">
+  <button type="button" class="tab active" data-view="tracker" id="tab-tracker">Tracker</button>
+  <button type="button" class="tab" data-view="roadmap" id="tab-roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables" id="tab-missables">Missables</button>
+  <button type="button" class="tab" data-view="about" id="tab-about">About &amp; Sources</button>
+</nav>
+
+<main class="wrap">
+  <section id="view-tracker" class="view">
+    <div class="toolbar" id="toolbar">
+      <input type="search" id="search" placeholder="Search trophies by name…" aria-label="Search trophies">
+      <label class="ctl">Grade
+        <select id="grade" aria-label="Filter by grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="ctl">Kind
+        <select id="kind" aria-label="Filter by kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side-quest">Side quests</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="exploration">Exploration</option>
+          <option value="combat">Combat</option>
+          <option value="partner">Partner</option>
+          <option value="money">Money</option>
+          <option value="secret">Secret</option>
+          <option value="missable">Missable</option>
+          <option value="completion">100% completion</option>
+        </select>
+      </label>
+      <label class="ctl">Status
+        <select id="status" aria-label="Filter by earned status">
+          <option value="all">Earned &amp; not yet</option>
+          <option value="earned">Earned</option>
+          <option value="unearned">Not yet earned</option>
+        </select>
+      </label>
+      <label class="ctl toggle"><input type="checkbox" id="spoilers" checked> Hide story spoilers</label>
+      <span class="spacer"></span>
+      <button type="button" id="export" class="btn">Export progress</button>
+      <label class="btn import">Import progress <input type="file" id="import" accept="application/json,.json" hidden></label>
+      <button type="button" id="reset" class="btn quiet">Reset</button>
+    </div>
+    <p class="count-line" id="count-line" aria-live="polite"></p>
+    <div class="tracker-grid">
+      <div class="list-col">
+        <ul class="trophy-list" id="trophy-list"></ul>
+        <p class="empty" id="empty" hidden>No trophies match these filters. Clear the search or widen a filter.</p>
+      </div>
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div class="facts" id="roadmap-facts"></div>
+    <div id="roadmap-stages"></div>
+    <p class="note">Roadmap built from the official trophy descriptions and PowerPyx's trophy roadmap (difficulty 4/10, about 200 hours, one playthrough, no mission replay). Full source list is on the About tab.</p>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div id="missables-body"></div>
+  </section>
+
+  <section id="view-about" class="view" hidden>
+    <div id="about-body"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Leonida Platinum — a free, open-source, offline guide. Works with the network off; your progress never leaves your browser. Trophy names, descriptions and grades are PlayStation's, as listed by Exophase and PSNProfiles on 18 November 2026. Guides are this site's own words, written from the official descriptions and the cited guides — never copied. No Rockstar logo or official artwork is used.</p>
+  <p class="small">Grand Theft Auto and GTA are trademarks of Take-Two Interactive. This is an unofficial fan-made guide, not affiliated with Rockstar Games or Sony.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
